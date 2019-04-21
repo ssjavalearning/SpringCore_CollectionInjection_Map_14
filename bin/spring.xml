@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+	<bean id="info" class="com.suraj.spring.beans.HCLInfo">
+		<property name="mapEmpIdName">
+			<map>
+				<entry key="1001" value="Suraj" />
+				<entry key="1002" value="Rama" />
+				<entry key="1003" value="Shyama" />
+			</map>
+		</property>
+		<property name="mapEmpIdEmployee">
+			<map>
+				<entry key="1001" value-ref="employee1" />
+				<entry key="1002" value-ref="employee2" />
+			</map>
+		</property>
+	</bean>
+
+	<bean id="employee1" class="com.suraj.spring.beans.Employee">
+		<property name="id" value="51697595" />
+		<property name="name" value="Suraj Singh" />
+		<property name="orgName" value="HCL Technologies" />
+	</bean>
+
+	<bean id="employee2" class="com.suraj.spring.beans.Employee">
+		<property name="id" value="51697590" />
+		<property name="name" value="Ram Mohan" />
+		<property name="orgName" value="HCL Technologies" />
+	</bean>
+</beans>
